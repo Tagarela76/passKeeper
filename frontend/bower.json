@@ -1,0 +1,22 @@
+{
+    "name": "passkeeper",
+    "version": "0.0.1",
+    "authors": [
+        "Denis Kucheruck <denis.kv76@gmail.com>"
+    ],
+    "description": "Pass Keeper",
+    "moduleType": [
+        "globals"
+    ],
+    "license": "MIT",
+    "ignore": [
+
+    ],
+    "dependencies": {
+        "angular": "1.4.6-build.4208+sha.6f39f10",
+        "bootstrap": "~3.3.4"
+    },
+    "devDependencies": {
+
+    }
+}
