@@ -1,5 +1,8 @@
 'use strict';
-var passKeeperApp = angular.module('passKeeperApp', ['ngRoute'])
+var passKeeperApp = angular.module('passKeeperApp', [
+        'ngRoute',
+        'ngResource'
+    ])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/home', {templateUrl: 'app/views/home.html', controller: HomeCtrl})
