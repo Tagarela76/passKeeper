@@ -62,14 +62,24 @@ keystone.set('500', function(err, req, res, next) {
     res.err(err, title, message);
 });
 
-// Load Routes
-var routes = {
-    views: importRoutes('./views')
+//USER ROUTES
+function userRoutes(app) {
+    var api = importRoutes('./api');
+    app.post('/api/users/register', api.user.register);
 };
+//COMMON ROUTES
+function viewsRoutes(app) {
+    // Load Routes
+    var routes = {
+        views: importRoutes('./views')
+    };
 
+    app.get('/', routes.views.index.index);
+
+};
 // Bind Routes
 exports = module.exports = function(app) {
-
-    app.get('/', routes.views.index);
+    userRoutes(app);
+    viewsRoutes(app);
 
 }

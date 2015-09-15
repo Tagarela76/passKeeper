@@ -1,13 +1,13 @@
 'use strict';
 
 var keystone = require('keystone');
-
+var http = require("http");
 /**
  * route handler for POST /api/user/register
  */
 function register(req, res) {
     console.log('user');
-    res.status(200);
+    res.apiResponse({});
 }
 
 module.exports = {
