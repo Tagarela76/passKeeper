@@ -7,3 +7,5 @@ keystone.start({
         var server = keystone.httpServer;
     }
 });
+
+console.log('server is working');

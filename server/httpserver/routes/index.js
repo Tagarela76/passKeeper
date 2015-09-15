@@ -42,13 +42,10 @@
 
 
 var keystone = require('keystone'),
-    //middleware = require('./middleware'),
+    middleware = require('./middleware'),
     importRoutes = keystone.importer(__dirname);
 
-// Common Middleware
-//keystone.pre('routes', middleware.initErrorHandlers);
-//keystone.pre('routes', middleware.initLocals);
-//keystone.pre('render', middleware.flashMessages);
+
 
 // Handle 404 errors
 keystone.set('404', function(req, res, next) {
@@ -73,6 +70,6 @@ var routes = {
 // Bind Routes
 exports = module.exports = function(app) {
 
-    app.get('/', routes.views.common.index);
+    app.get('/', routes.views.index);
 
 }
